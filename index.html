@@ -3,49 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cardio Clinic Desktop | Modern Patient Management</title>
+  <title>Cardio Clinic | Installer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="gradient-orb orb-1"></div>
-  <div class="gradient-orb orb-2"></div>
-  <div class="gradient-orb orb-3"></div>
-
-  <main class="card">
-    <div class="glow-effect"></div>
-    
-    <div class="brand">
-      <div class="logo-wrapper">
-        <div class="pulse-ring"></div>
-        <div class="pulse-ring pulse-delay-1"></div>
-        <div class="pulse-ring pulse-delay-2"></div>
-        <img src="logo.png" alt="Cardio Clinic logo">
+  <main class="shell">
+    <header class="hero">
+      <div class="logo-circle">
+        <img src="assets/logo.png" alt="Cardio Clinic logo">
       </div>
-      <div class="brand-text">
-        <span class="badge">Healthcare Technology</span>
-        <h1>Cardio Clinic</h1>
-        <p class="subtitle">Next-generation patient care platform</p>
+      <div class="hero-text">
+        <p class="eyebrow">Cardio Clinic Desktop</p>
+        <h1>Clinical-grade patient & staff management</h1>
+        <p class="lede">Built for cardiology teams that need clarity, security, and speed at every patient touchpoint.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://github.com/xampos101/Clinic/releases/download/v1.0.0/Cardio.Clinic.Setup.exe">
+            <span class="icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </span>
+            Download for Windows
+          </a>
+          <div class="meta">
+            <span>Windows 10/11</span>
+            <span>Signed installer</span>
+            <span>Python-powered</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
 
-    <p class="description">Powerful desktop application built for modern cardiovascular healthcare. Secure patient management with enterprise-grade reliability and beautiful, intuitive design.</p>
-
-    <div class="features">
-      <div class="feature-card">
-        <div class="feature-icon">
+    <section class="pillars">
+      <article class="pillar">
+        <div class="pill-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <h3>Enterprise Security</h3>
-        <p>HIPAA compliant with end-to-end encryption</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">
+        <h3>Secure by default</h3>
+        <p>Encryption, access controls, and auditability baked into every workflow.</p>
+      </article>
+      <article class="pillar">
+        <div class="pill-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
             <circle cx="9" cy="7" r="4"/>
@@ -53,83 +58,37 @@
             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
-        <h3>Smart Access Control</h3>
-        <p>Role-based permissions for your entire team</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">
+        <h3>Team-ready</h3>
+        <p>Role-based access, staff management, and clear accountability for every action.</p>
+      </article>
+      <article class="pillar">
+        <div class="pill-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="1" x2="12" y2="23"/>
             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
           </svg>
         </div>
-        <h3>Works Offline</h3>
-        <p>Full functionality without internet connection</p>
+        <h3>Clinic-fast</h3>
+        <p>Optimized flows for front desk, clinicians, and billing—online or offline.</p>
+      </article>
+    </section>
+
+    <section class="team">
+      <p class="team-label">Built by</p>
+      <div class="team-grid">
+        <a class="chip" href="https://github.com/xampos101">xampos101</a>
+        <a class="chip" href="https://github.com/Leon1dasV">Leon1dasV</a>
+        <a class="chip" href="https://github.com/BillyTheTroller">BillyTheTroller</a>
       </div>
-    </div>
-
-    <a class="download-btn" href="https://github.com/xampos101/Clinic/releases/download/v1.0.0/Cardio.Clinic.Setup.exe">
-      <span class="btn-bg"></span>
-      <span class="btn-content">
-        <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-          <polyline points="7 10 12 15 17 10"/>
-          <line x1="12" y1="15" x2="12" y2="3"/>
-        </svg>
-        Download for Windows
-      </span>
-    </a>
-
-    <div class="meta-info">
-      <span class="meta-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"/>
-          <polyline points="12 6 12 12 16 14"/>
-        </svg>
-        Windows 10/11
-      </span>
-      <span class="meta-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-        Signed & Verified
-      </span>
-      <span class="meta-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-          <line x1="8" y1="21" x2="16" y2="21"/>
-          <line x1="12" y1="17" x2="12" y2="21"/>
-        </svg>
-        Desktop App
-      </span>
-    </div>
-
-    <div class="team-section">
-      <p class="team-label">Developed by</p>
-      <div class="team">
-        <a class="dev-chip" href="https://github.com/xampos101">
-          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.7 7.7 0 0 1 8 3.47c.68.01 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-          xampos101
-        </a>
-        <a class="dev-chip" href="https://github.com/Leon1dasV">
-          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.7 7.7 0 0 1 8 3.47c.68.01 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-          Leon1dasV
-        </a>
-        <a class="dev-chip" href="https://github.com/BillyTheTroller">
-          <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.7 7.7 0 0 1 8 3.47c.68.01 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-          BillyTheTroller
-        </a>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <a class="github-link" href="https://github.com/xampos101/Clinic">
-      <svg viewBox="0 0 16 16">
+    <a class="footer-link" href="https://github.com/xampos101/Clinic">
+      <svg viewBox="0 0 16 16" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.7 7.7 0 0 1 8 3.47c.68.01 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
       </svg>
-      <span>View Source</span>
+      View source
     </a>
   </footer>
 </body>

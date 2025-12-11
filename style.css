@@ -1,0 +1,205 @@
+:root {
+  --bg: #0b111a;
+  --panel: #0f1724;
+  --text: #e8edf5;
+  --muted: #a9b4c8;
+  --accent: #2f8cff;
+  --accent-strong: #1f6fd1;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  --outline: 2px solid rgba(47, 140, 255, 0.65);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(47, 140, 255, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(31, 111, 209, 0.16), transparent 32%),
+    linear-gradient(140deg, #0b111a 0%, #0c1421 50%, #0b111a 100%);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.card {
+  width: min(540px, 92vw);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 52px 44px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(47, 140, 255, 0.08), transparent 30%);
+  pointer-events: none;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.brand img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p.tagline {
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #f7fbff;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(47, 140, 255, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(47, 140, 255, 0.42);
+  filter: brightness(1.04);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+.cta:focus-visible {
+  outline: var(--outline);
+  outline-offset: 3px;
+}
+
+.note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.team {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.chip:hover {
+  background: rgba(47, 140, 255, 0.12);
+  border-color: rgba(47, 140, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.chip:focus-visible {
+  outline: var(--outline);
+  outline-offset: 3px;
+}
+
+.chip svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--text);
+  opacity: 0.8;
+}
+
+.footer-link {
+  position: fixed;
+  bottom: 22px;
+  left: 22px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.footer-link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.footer-link:focus-visible {
+  outline: var(--outline);
+  outline-offset: 4px;
+}
+
+.octo {
+  width: 28px;
+  height: 28px;
+  fill: var(--muted);
+}
+
+@media (max-width: 520px) {
+  .card { padding: 42px 30px; }
+  .brand img { width: 50px; height: 50px; }
+  .footer-link { bottom: 16px; left: 16px; }
+}
+

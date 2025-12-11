@@ -7,6 +7,8 @@
   --accent-strong: #1f6fd1;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
   --outline: 2px solid rgba(47, 140, 255, 0.65);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-strong: rgba(255, 255, 255, 0.1);
 }
 
 *,
@@ -27,12 +29,13 @@ body {
   color: var(--text);
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   letter-spacing: -0.01em;
+  padding: 32px 18px;
 }
 
 .card {
   width: min(540px, 92vw);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(155deg, var(--glass), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 52px 44px;
   box-shadow: var(--shadow);
@@ -46,7 +49,9 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(47, 140, 255, 0.08), transparent 30%);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(47, 140, 255, 0.12), transparent 34%),
+    radial-gradient(circle at 70% 80%, rgba(31, 111, 209, 0.12), transparent 40%);
   pointer-events: none;
 }
 
@@ -67,6 +72,18 @@ body {
   filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
 }
 
+.brand-text {
+  text-align: left;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 h1 {
   margin: 0 0 12px;
   font-size: clamp(30px, 4vw, 40px);
@@ -79,6 +96,24 @@ p.tagline {
   color: var(--muted);
   font-size: 16px;
   line-height: 1.6;
+}
+
+.pill-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0.02em;
 }
 
 .cta {
@@ -124,6 +159,14 @@ p.tagline {
   letter-spacing: 0;
   position: relative;
   z-index: 1;
+}
+
+.detail {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
 }
 
 .team {
@@ -200,6 +243,8 @@ p.tagline {
 @media (max-width: 520px) {
   .card { padding: 42px 30px; }
   .brand img { width: 50px; height: 50px; }
+  .brand-text { text-align: center; }
+  .brand { flex-direction: column; }
   .footer-link { bottom: 16px; left: 16px; }
 }
 

@@ -1,12 +1,14 @@
+/* Cardio Clinic Theme - Επαγγελματικό & Καθαρό */
 :root {
-  --bg: #0f1720;
-  --panel: rgba(255, 255, 255, 0.04);
-  --border: rgba(255, 255, 255, 0.08);
-  --text: #e9eef7;
-  --muted: #98a6b8;
-  --accent: #2fa8c9;
-  --accent-strong: #1f7ea5;
-  --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  --bg-color: #f4f6f9; /* Πολύ απαλό γκρι-μπλε φόντο */
+  --card-bg: #ffffff; /* Καθαρό λευκό για κάρτες */
+  --border-color: #e0e6ef; /* Απαλή διαχωριστική γραμμή */
+  --text-primary: #333d47; /* Σκούρο γκρι-μπλε για κύριο κείμενο */
+  --text-secondary: #6b7a8d; /* Πιο ανοιχτό γκρι για λεπτομέρειες */
+  --accent-blue: #007bff; /* Ιατρικό/Εμπιστοσύνης Μπλε */
+  --accent-red: #cc3333; /* Καρδιακό Κόκκινο - πιο ήπια απόχρωση */
+  --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 * { box-sizing: border-box; }
@@ -16,196 +18,230 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: radial-gradient(circle at 20% 20%, rgba(47,168,201,0.12), transparent 30%),
-              radial-gradient(circle at 80% 80%, rgba(31,126,165,0.14), transparent 32%),
-              var(--bg);
-  color: var(--text);
-  font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  /* Κλασικές γραμματοσειρές */
+  font-family: 'Roboto', -apple-system, system-ui, sans-serif;
   padding: 40px 18px;
-}
-
-.shell {
-  width: min(900px, 100%);
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 26px;
-  padding: 40px 44px 32px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
-}
-
-.hero {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 22px;
-  align-items: center;
-}
-
-.logo-circle {
-  width: 88px;
-  height: 88px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--border);
-  display: grid;
-  place-items: center;
-  padding: 14px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
-}
-
-.logo-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.hero-text h1 {
-  margin: 6px 0 12px;
-  font-size: clamp(28px, 4vw, 38px);
-  letter-spacing: -0.02em;
-}
-
-.eyebrow {
-  margin: 0;
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.lede {
-  margin: 0 0 18px;
-  color: var(--muted);
   line-height: 1.6;
 }
 
-.cta-row {
+h1, h3 {
+  font-family: 'Merriweather', Georgia, serif; /* Σοβαρή γραμματοσειρά για επικεφαλίδες */
+  color: var(--text-primary);
+}
+
+/* Γενικό Κοντέινερ - Καρδιά της σελίδας */
+.clinic-container {
+  width: min(1000px, 100%);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 50px 60px 40px;
+  box-shadow: var(--shadow-light);
+}
+
+/* Ενότητα Επικεφαλίδας/Hero */
+.clinic-header {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo-area {
+  min-width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  border: 6px solid rgba(255, 255, 255, 0.8);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px var(--accent-blue);
+}
+
+.logo-image {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  /* Χρώμα λογότυπου (Υποθέτουμε ότι είναι SVG ή διαφανές PNG) */
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.tagline {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-red); /* Το κόκκινο της καρδιάς */
+  font-weight: 700;
+}
+
+.header-content h1 {
+  margin: 8px 0 12px;
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: -0.01em;
+  color: var(--accent-blue); /* Σημαντική πληροφορία στο μπλε της εμπιστοσύνης */
+}
+
+.description {
+  margin: 0 0 24px;
+  color: var(--text-secondary);
+  font-size: 17px;
+}
+
+/* Κουμπιά & CTAs */
+.cta-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 20px;
   align-items: center;
+  margin-top: 10px;
 }
 
-.btn {
+.btn-download {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 18px;
-  border-radius: 14px;
+  gap: 12px;
+  padding: 16px 24px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 15px;
-  border: 1px solid transparent;
-}
-
-.btn.primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  color: #f6fbff;
-  box-shadow: 0 12px 28px rgba(47,168,201,0.35);
-}
-
-.btn.primary:hover { filter: brightness(1.05); transform: translateY(-1px); }
-.btn.primary:active { transform: translateY(0); }
-
-.icon-circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(255,255,255,0.12);
-}
-
-.meta {
-  display: inline-flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  margin: 32px 0 26px;
-}
-
-.pillar {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 18px 16px;
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.pillar:hover {
-  border-color: rgba(47,168,201,0.4);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-}
-
-.pill-icon {
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  background: rgba(47,168,201,0.16);
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-
-.pillar h3 {
-  margin: 0 0 8px;
   font-size: 16px;
+  border: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.pillar p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.55;
+.btn-download.primary-color {
+  background-color: var(--accent-red);
+  color: #ffffff;
+}
+
+.btn-download.primary-color:hover {
+  background-color: #b32a2a; /* Πιο σκούρο κόκκινο στο hover */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(204, 51, 51, 0.4);
+}
+
+.btn-download svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+}
+
+.meta-info {
+  display: inline-flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: var(--text-secondary);
   font-size: 14px;
 }
 
-.team {
-  border-top: 1px solid var(--border);
-  padding-top: 18px;
+.meta-info span {
+  position: relative;
+  padding-left: 15px;
+}
+
+.meta-info span::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-blue);
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Βασικές Λειτουργίες */
+.key-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 30px 0 40px;
+}
+
+.feature-card {
+  background: var(--bg-color); /* Ελαφρώς διαφορετικό φόντο από το container */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.icon-wrap {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  background: var(--accent-blue);
+  color: white;
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: var(--accent-blue);
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* Ομάδα Ανάπτυξης */
+.team-attribution {
+  border-top: 1px solid var(--border-color);
+  padding-top: 25px;
+  margin-top: 20px;
 }
 
 .team-label {
   margin: 0 0 10px;
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  font-size: 13px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.team-grid {
+.developer-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
-.chip {
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.02);
-  color: var(--text);
+.dev-tag {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: #fcfdff;
+  color: var(--text-primary);
   text-decoration: none;
-  font-weight: 600;
-  transition: border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  font-size: 14px;
 }
 
-.chip:hover {
-  border-color: rgba(47,168,201,0.5);
-  color: #f4fbff;
-  transform: translateY(-1px);
+.dev-tag:hover {
+  border-color: var(--accent-red);
+  background-color: #ffeaea;
+  color: var(--accent-red);
 }
 
-.footer {
-  margin-top: 28px;
+/* Footer */
+.app-footer {
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -213,36 +249,42 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--muted);
+  color: var(--text-secondary);
   text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.02);
-  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  transition: all 0.2s ease;
+  font-size: 14px;
 }
 
 .footer-link:hover {
-  border-color: rgba(47,168,201,0.5);
-  color: #f4fbff;
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  background-color: #f7faff;
   transform: translateY(-1px);
 }
 
 .footer-link svg {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   fill: currentColor;
 }
 
-@media (max-width: 720px) {
-  .shell { padding: 32px 28px 26px; }
-  .hero { grid-template-columns: 1fr; text-align: center; }
-  .logo-circle { margin: 0 auto; }
-  .cta-row { justify-content: center; }
+/* Media Queries για Responsive Design */
+@media (max-width: 800px) {
+  .clinic-container { padding: 40px 30px 30px; }
+  .clinic-header { flex-direction: column; text-align: center; }
+  .header-content h1 { font-size: 34px; }
+  .cta-group { justify-content: center; }
+  .meta-info { justify-content: center; }
 }
 
-@media (max-width: 480px) {
-  body { padding: 30px 14px; }
-  .shell { padding: 28px 22px; }
-  .pillars { grid-template-columns: 1fr; }
+@media (max-width: 550px) {
+  body { padding: 20px 10px; }
+  .clinic-container { padding: 30px 20px 20px; }
+  .logo-area { width: 100px; height: 100px; border-width: 4px; }
+  .header-content h1 { font-size: 28px; }
+  .key-features { grid-template-columns: 1fr; }
 }

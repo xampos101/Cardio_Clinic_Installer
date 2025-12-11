@@ -7,49 +7,51 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main class="clinic-container">
-    <header class="clinic-header">
-      <div class="logo-area">
-        <img src="assets/logo.png" alt="Cardio Clinic logo" class="logo-image">
+  <main class="app-shell">
+    <header class="hero-section">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Cardio Clinic logo" class="app-logo">
       </div>
-      <div class="header-content">
-        <p class="tagline">Cardio Clinic Desktop Edition</p>
-        <h1>Ακρίβεια & Φροντίδα.</h1>
-        <p class="description">Εφαρμογή διαχείρισης ασθενών και προσωπικού σχεδιασμένη για την **Καρδιολογική Κλινική**, εξασφαλίζοντας σαφήνεια, ασφάλεια και ταχύτητα.</p>
+      <div class="hero-content">
+        <p class="subheading">Cardio Clinic Desktop</p>
+        <h1 class="main-title">Ακριβής Διαχείριση. Υψηλές Επιδόσεις.</h1>
+        <p class="summary-text">Η λύση επόμενης γενιάς για την καρδιολογική σας κλινική. Ασφάλεια, ταχύτητα και σαφήνεια δεδομένων σε κάθε σημείο επαφής με τον ασθενή.</p>
         
-        <div class="cta-group">
-          <a class="btn-download primary-color" href="https://github.com/xampos101/Clinic/releases/download/v1.0.0/Cardio.Clinic.Setup.exe">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            Λήψη για Windows
+        <div class="download-group">
+          <a class="btn-cta primary-glow" href="https://github.com/xampos101/Clinic/releases/download/v1.0.0/Cardio.Clinic.Setup.exe">
+            <span class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </span>
+            Λήψη Installer (Windows)
           </a>
-          <div class="meta-info">
-            <span>Υποστηρίζει Windows 10/11</span>
-            <span>Επίσημα υπογεγραμμένος Installer</span>
-            <span>Με τεχνολογία Python</span>
+          <div class="tech-specs">
+            <span>Windows 10/11</span>
+            <span>Signed installer</span>
+            <span>Python-powered</span>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="key-features">
+    <section class="core-features">
       <article class="feature-card">
-        <div class="icon-wrap">
+        <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <h3>Υψίστη Ασφάλεια</h3>
-        <p>Κρυπτογράφηση, έλεγχοι πρόσβασης και πλήρης ιχνηλασιμότητα ενσωματωμένα σε κάθε λειτουργία.</p>
+        <h3>Ασφάλεια Δεδομένων</h3>
+        <p>Πρότυπα κρυπτογράφησης ιατρικού επιπέδου και αυστηροί έλεγχοι πρόσβασης, πάντα ενεργοί.</p>
       </article>
       <article class="feature-card">
-        <div class="icon-wrap">
+        <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
             <circle cx="9" cy="7" r="4"/>
@@ -57,24 +59,24 @@
             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
-        <h3>Σχεδιασμένο για Ομάδες</h3>
-        <p>Διαχείριση προσωπικού, ρόλοι πρόσβασης και σαφής λογοδοσία για κάθε ενέργεια της ομάδας.</p>
+        <h3>Συνεργατικότητα Ομάδας</h3>
+        <p>Εργαλεία διαχείρισης προσωπικού και σαφείς ροές για κοινή ευθύνη και παραγωγικότητα.</p>
       </article>
       <article class="feature-card">
-        <div class="icon-wrap">
+        <div class="feature-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="1" x2="12" y2="23"/>
             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
           </svg>
         </div>
-        <h3>Γρήγορο & Αξιόπιστο</h3>
-        <p>Βελτιστοποιημένες ροές εργασίας για ιατρούς, γραμματεία και χρεώσεις, εντός ή εκτός σύνδεσης.</p>
+        <h3>Κλινική Ταχύτητα</h3>
+        <p>Βελτιστοποιημένο interface για άμεση καταγραφή και ανάκτηση ιατρικών δεδομένων, online ή offline.</p>
       </article>
     </section>
 
-    <section class="team-attribution">
-      <p class="team-label">Ανάπτυξη από την Ομάδα</p>
-      <div class="developer-list">
+    <section class="team-credits">
+      <p class="team-label">Ανάπτυξη</p>
+      <div class="team-list">
         <a class="dev-tag" href="https://github.com/xampos101">xampos101</a>
         <a class="dev-tag" href="https://github.com/Leon1dasV">Leon1dasV</a>
         <a class="dev-tag" href="https://github.com/BillyTheTroller">BillyTheTroller</a>
@@ -87,7 +89,7 @@
       <svg viewBox="0 0 16 16" aria-hidden="true">
         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.7 7.7 0 0 1 8 3.47c.68.01 1.36.09 2 .26 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
       </svg>
-      Προβολή Κώδικα (GitHub)
+      View source code
     </a>
   </footer>
 </body>
